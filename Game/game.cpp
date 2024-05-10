@@ -1,6 +1,6 @@
 ﻿
-#include "SFML-CMake-Template.h"
-#include <SFML/Graphics.hpp>
+#include "Game.h"
+
 
 int main()
 {

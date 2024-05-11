@@ -5,6 +5,10 @@ private:
 	float m_x;
 	float m_y;
 public:
+	Vector2D()
+		:m_x(0.0f), m_y(0.0f)
+	{}
+
 	Vector2D(float x, float y)
 		:m_x(x), m_y(y)
 	{}

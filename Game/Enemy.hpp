@@ -19,10 +19,12 @@ public:
 		m_shape.setPosition(m_position.x(), m_position.y());
 	};
 	~Enemy() {}
+	const Vector2D& position() const
+	{
+		return m_position;
+	}
 	void destroy() 
 	{
 		active = false;
 	}
-
-
 };

@@ -15,6 +15,7 @@ public:
 	Enemy(uint32_t id, const Vector2D& pos)
 		: m_id(id), m_position(pos)
 	{
+		m_shape.setFillColor(sf::Color::White);
 		m_shape.setSize(sf::Vector2f(ENEMY_LENGHT, ENEMY_HEIGHT));
 		m_shape.setPosition(m_position.x(), m_position.y());
 	};

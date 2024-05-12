@@ -1,22 +1,24 @@
 #pragma once
 #include "Vector2D.hpp"
 #include <SFML/Graphics.hpp>
-#define BALL_RADIUS 30.0f
+#define PLAYER_LENGHT 100.0f
+#define PLAYER_HEIGHT 20.0f
 
-class Ball {
+class Player
+{
 private:
-	sf::CircleShape m_shape;
+	sf::RectangleShape m_shape;
 	Vector2D m_position;
 	Vector2D m_velocity;
 public:
-	Ball(const Vector2D& pos, const Vector2D& vel)
-		:	m_position(pos), m_velocity(vel)
+	Player(const Vector2D& pos)
+		:m_position(pos)
 	{
 		m_shape.setFillColor(sf::Color::White);
-		m_shape.setRadius(BALL_RADIUS);
+		m_shape.setSize(sf::Vector2f(PLAYER_LENGHT, PLAYER_HEIGHT));
 		m_shape.setPosition(m_position.x(), m_position.y());
 	}
-	~Ball() {}
+	~Player() {}
 	Vector2D& position()
 	{
 		return m_position;
@@ -25,5 +27,4 @@ public:
 	{
 		return m_velocity;
 	}
-
 };

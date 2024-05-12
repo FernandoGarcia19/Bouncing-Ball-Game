@@ -3,7 +3,7 @@
 #
 
 # Add source to this project's executable.
-add_executable (Game "game.cpp" "game.h"  "Enemy.hpp")
+add_executable (Game "game.cpp" "game.h"  "Enemy.hpp" "Player.hpp")
 target_link_libraries(Game ${CMAKE_SOURCE_DIR}/library/sfml-graphics.lib)
 target_link_libraries(Game ${CMAKE_SOURCE_DIR}/library/sfml-audio.lib)
 target_link_libraries(Game ${CMAKE_SOURCE_DIR}/library/sfml-system.lib)

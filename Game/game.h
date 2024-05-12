@@ -5,8 +5,6 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "Enemy.hpp"
-#include "Ball.hpp"
-#include "Player.hpp"
+#include "Systems.hpp"
 
 // TODO: Reference additional headers your program requires here.

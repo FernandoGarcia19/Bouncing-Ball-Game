@@ -27,4 +27,9 @@ public:
 	{
 		return m_velocity;
 	}
+	const sf::RectangleShape& shape()
+	{
+		return m_shape;
+	}
+
 };

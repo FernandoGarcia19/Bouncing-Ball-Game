@@ -28,4 +28,8 @@ public:
 	{
 		active = false;
 	}
+	const sf::RectangleShape& shape()
+	{
+		return m_shape;
+	}
 };

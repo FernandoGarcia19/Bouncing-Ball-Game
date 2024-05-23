@@ -25,5 +25,8 @@ public:
 	{
 		return m_velocity;
 	}
-
+	const sf::CircleShape& shape()
+	{
+		return m_shape;
+	}
 };

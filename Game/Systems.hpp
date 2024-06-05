@@ -25,6 +25,38 @@ private:
 		}
 	}
 
+	void playerInput() {
+		sf::Event event;
+		while (m_window.pollEvent(event))
+		{
+			if (event.type == sf::Event::KeyPressed	)
+			{
+				switch (event.key.code)
+				{
+				case sf::Keyboard::A:
+					m_player.controls().left = true;
+					break;
+				case sf::Keyboard::D:
+					m_player.controls().left = true;
+					break;
+				}
+			}
+			if (event.type == sf::Event::KeyReleased)
+			{
+				switch (event.key.code)
+				{
+				case sf::Keyboard::A:
+					m_player.controls().left = false;
+					break;
+				case sf::Keyboard::D:
+					m_player.controls().left = false;
+					break;
+				}
+			}
+
+		}
+	}
+
 public:
 	Systems()
 		:	m_player(Player(Vector2D(400.0f, 400.0f))),

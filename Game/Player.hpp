@@ -4,12 +4,18 @@
 #define PLAYER_LENGHT 100.0f
 #define PLAYER_HEIGHT 20.0f
 
+struct Controls {
+	bool left = false;
+	bool right = false;
+};
+
 class Player
 {
 private:
 	sf::RectangleShape m_shape;
 	Vector2D m_position;
 	Vector2D m_velocity;
+	Controls m_controls;
 public:
 	Player(const Vector2D& pos)
 		:m_position(pos)
@@ -30,6 +36,10 @@ public:
 	const sf::RectangleShape& shape()
 	{
 		return m_shape;
+	}
+	Controls& controls()
+	{
+		return m_controls;
 	}
 
 };
